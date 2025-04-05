@@ -13,9 +13,9 @@ connectDB();
 const app = express();
 
 // Middleware
-// Configure CORS to allow requests from any origin
+// Configure CORS to allow requests from the Vercel deployment and localhost
 app.use(cors({
-  origin: '*',
+  origin: ['https://recipe-haven-three.vercel.app', 'http://localhost:3000', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
